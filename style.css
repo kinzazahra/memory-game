@@ -1,7 +1,7 @@
 body { 
     margin: 0; 
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); /* Clean pastel gradient */
+    background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%);
     color: #333; 
     display: flex;
     justify-content: center;
@@ -12,7 +12,7 @@ body {
 
 .container { 
     width: 100%;
-    max-width: 450px; 
+    max-width: 480px; /* Made slightly wider for the new stats */
     padding: 20px; 
     text-align: center;
     position: relative;
@@ -35,26 +35,26 @@ h1 {
 
 .stats { 
     display: grid; 
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(3, 1fr); /* Updated to 3 columns */
     gap: 10px; 
     padding: 15px;
     margin-bottom: 25px; 
     font-weight: 600;
     color: #4a4a4a;
+    font-size: 0.95rem;
 } 
 
 .stats p {
     margin: 5px 0;
 }
 
-/* 4x4 Grid setup */
 #grid { 
     display: grid; 
     grid-template-columns: repeat(4, 80px); 
     gap: 12px; 
     justify-content: center; 
     margin: 0 auto 25px auto; 
-    perspective: 1000px; /* Essential for 3D flip */
+    perspective: 1000px; 
 } 
 
 .card { 
@@ -72,7 +72,6 @@ h1 {
     transform-style: preserve-3d;
 }
 
-/* Flips the card */
 .card.flipped .card-inner {
     transform: rotateY(180deg);
 }
@@ -90,7 +89,6 @@ h1 {
     box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* The side facing up initially (The "?" side) */
 .card-front {
     background: rgba(255, 255, 255, 0.6);
     border: 1px solid rgba(255, 255, 255, 0.8);
@@ -98,7 +96,6 @@ h1 {
     font-size: 1.5rem;
 }
 
-/* The side with the image/emoji */
 .card-back {
     background: #ffffff;
     transform: rotateY(180deg);
