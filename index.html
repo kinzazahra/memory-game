@@ -1,28 +1,34 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memory Booster Game</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="container">
+    <h1>🧠 Memory Booster</h1>
+    
+    <div class="stats glass-panel">
+      <p>Score: <span id="score">0</span></p>
+      <p>Level: <span id="level">1</span></p>
+      <p>Lives: <span id="lives">3</span></p>
+      <p>High Score: <span id="highScore">0</span></p>
+      <p>Time Left: <span id="timer">60</span>s</p>
+    </div>
 
-  <h1>🧠 Memory Booster Game</h1>
-
-  <div id="game">
     <div id="grid"></div>
-
-```
-<button onclick="startGame()">Start Game</button>
-
-<p>Score: <span id="score">0</span></p>
-<p>Level: <span id="level">1</span></p>
-```
-
+    
+    <button id="startBtn" onclick="startGame()" class="primary-btn">Start Game</button>
+    
+    <div id="gameOver" class="hidden glass-panel overlay">
+      <h2 id="endMessage">Game Over</h2>
+      <p>Final Score: <span id="finalScore">0</span></p>
+      <button class="primary-btn" onclick="startGame()">Play Again</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
-
 </body>
 </html>
