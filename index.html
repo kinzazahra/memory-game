@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Memory Booster Game</title>
   <link rel="stylesheet" href="style.css">
-  <!-- Confetti Library -->
   <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
 </head>
 <body>
@@ -21,15 +20,25 @@
       <p>Stars: <span id="stars">⭐⭐⭐</span></p>
     </div>
 
-    <div id="grid"></div>
+    <div id="grid" class="grid-4x4"></div>
     
-    <button id="startBtn" onclick="startGame()" class="primary-btn">Start Game</button>
+    <div id="startScreen" class="glass-panel overlay">
+      <h2>Welcome!</h2>
+      <p>Select your deck theme:</p>
+      <select id="themeSelect" class="dropdown">
+        <option value="tech">💻 Tech</option>
+        <option value="animals">🐶 Animals</option>
+        <option value="food">🍔 Food</option>
+        <option value="spooky">🎃 Spooky</option>
+      </select>
+      <button onclick="initGame()" class="primary-btn" style="margin-top: 20px;">Start Game</button>
+    </div>
     
     <div id="gameOver" class="hidden glass-panel overlay">
       <h2 id="endMessage">Game Over</h2>
       <p>Final Score: <span id="finalScore">0</span></p>
       <p>High Score: <span id="highScore">0</span></p>
-      <button class="primary-btn" onclick="startGame()" style="margin-top: 15px;">Play Again</button>
+      <button class="primary-btn" onclick="initGame()" style="margin-top: 15px;">Play Again</button>
     </div>
   </div>
 
